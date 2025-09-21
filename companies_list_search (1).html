@@ -5,12 +5,29 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>لیست شرکت‌ها</title>
   <style>
-    body { font-family: Tahoma, Arial, sans-serif; padding: 20px; background: #f7f7f7; }
-    .card { background: white; border-radius: 8px; padding: 16px; max-width: 760px; margin: 12px auto; box-shadow: 0 2px 8px rgba(0,0,0,0.06); }
+    /* پس‌زمینه با تصویر شرکت */
+    body { 
+      font-family: Tahoma, Arial, sans-serif; 
+      padding: 20px; 
+      background: url('https://raw.githubusercontent.com/zafari3866/companies/main/9852.jpg') no-repeat center center fixed; 
+      background-size: cover; 
+    }
+
+    /* کارت محتوا کمی شفاف برای خوانایی */
+    .card { 
+      background: rgba(255, 255, 255, 0.85); 
+      border-radius: 8px; 
+      padding: 16px; 
+      max-width: 760px; 
+      margin: 12px auto; 
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06); 
+    }
+
     h1 { margin-top:0; }
     ul { padding-right: 0; list-style: none; }
     li { margin: 10px 0; padding: 10px; border-right: 4px solid #2b7cff; border-radius:4px; }
     a.link { text-decoration: none; color: #0b63d6; }
+    a.link:hover { text-decoration: underline; }
     .note { color: #666; font-size: 0.95em; margin-top: 8px; }
     #searchBox { width: 100%; padding: 10px; margin-bottom: 15px; border-radius: 6px; border: 1px solid #ccc; font-size: 1em; }
   </style>
@@ -18,11 +35,19 @@
 <body>
   <div class="card">
     <h1>📍 لیست شرکت‌ها و لوکیشن‌ها</h1>
-    <p class="note">برای باز کردن لوکیشن، روی لینک هر شرکت کلیک کنید. برای جستجو، نام شرکت را در کادر زیر تایپ کنید.</p>
+    <p class="note">برای باز کردن لوکیشن، روی نام شرکت کلیک کنید. برای جستجو، نام شرکت را در کادر زیر تایپ کنید.</p>
     <input type="text" id="searchBox" placeholder="🔍 جستجوی شرکت..." onkeyup="searchCompany()">
     <ul id="companyList">
-      <li><strong>شرکت شیشه فلوت</strong><br><a class="link" href="https://neshan.org/maps/places/ebf3f4bfc150e7923e130e5e0c693554#c35.936-59.762-18z-0p" target="_blank" rel="noopener noreferrer">https://neshan.org/maps/places/ebf3f4bfc150e7923e130e5e0c693554#c35.936-59.762-18z-0p</a></li>
-      <li><strong>شرکت کاویان سیلیس</strong><br><a class="link" href="https://neshan.org/maps/places/e2edd385cc2e03ab172eddd8bd94acd2#c36.255-49.234-19z-0p" target="_blank" rel="noopener noreferrer">https://neshan.org/maps/places/e2edd385cc2e03ab172eddd8bd94acd2#c36.255-49.234-19z-0p</a></li>
+      <li>
+        <a class="link" href="https://neshan.org/maps/places/ebf3f4bfc150e7923e130e5e0c693554#c35.936-59.762-18z-0p" target="_blank" rel="noopener noreferrer">
+          <strong>شرکت شیشه فلوت</strong>
+        </a>
+      </li>
+      <li>
+        <a class="link" href="https://neshan.org/maps/places/e2edd385cc2e03ab172eddd8bd94acd2#c36.255-49.234-19z-0p" target="_blank" rel="noopener noreferrer">
+          <strong>شرکت کاویان سیلیس</strong>
+        </a>
+      </li>
     </ul>
   </div>
   <script>
